@@ -26,11 +26,16 @@
                     <ColumnDefinition Width="2.7*"></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Button Grid.Column="1" Margin="10">Send</Button>
-                <TextBox Margin="3" TextAlignment="Right" TextWrapping="Wrap"  ></TextBox>
+                <Button Grid.Column="1" Margin="10" >Send</Button>
+                <TextBox Margin="3" TextAlignment="Right" TextWrapping="Wrap" Text="{Binding Message}"  ></TextBox>
             </Grid>
         </GroupBox>
-        <Button Grid.Row="0" Grid.Column="2" Height="40" Width="100" Content="Connect" />
+        <Button Grid.Row="0" Grid.Column="2" Height="40" Width="100" Content="Connect" Command="{Binding Connect}" />
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <Button  Content="Server Start" Command="{Binding Listen}" />
+            <Button  Content="Server Stop" Command="{Binding Stop}" />
+        </StackPanel>
+        
     </Grid>
     
 
