@@ -70,8 +70,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="SimpleCommunicationViewModel.cs" />
-    <Compile Include="TCP\TCPClient.cs" />
-    <Compile Include="TCP\TCPListener.cs" />
     <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="ViewModel\ViewModelLocator.cs" />
     <Page Include="MainWindow.xaml">
