@@ -5,12 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SimpleCommunicator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="500">
+        Title="MainWindow" Height="450" Width="550">
     <Grid>
-  
-    </Grid>
-    
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40*" />
+            <RowDefinition Height="510*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Grid.Row="0" Grid.ColumnSpan="3">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="Settings" Width="60" Margin="5,5,0,5" >
+                    <MenuItem Header=" ServerAddres"  Command="{Binding ServerAddresUserControl}"  ></MenuItem>
+                    <MenuItem Header=" LocalAddres"  ></MenuItem>
+                    <MenuItem Header="BanList"></MenuItem>
+                </MenuItem>
+                <MenuItem Header="File" Width="60" Margin="0,5,0,5"   >
+                    <MenuItem Header="Exit" ></MenuItem>
+                    <MenuItem Header=" Logout"></MenuItem>
+                    <MenuItem Header=" LogIn"></MenuItem>
+                    <MenuItem Header="toPDF"></MenuItem>
+                </MenuItem>
+            </Menu>
 
+        </DockPanel>
+        <UserControl Grid.Row="1" VerticalAlignment="Stretch"  HorizontalAlignment="Stretch" Content="{Binding CurrentContext}" >
+
+        </UserControl>
+    </Grid>
 </Window>
 
 
