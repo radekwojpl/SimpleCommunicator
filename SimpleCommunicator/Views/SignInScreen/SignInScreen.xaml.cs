@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,18 +13,18 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace SimpleCommunicator.Views.LoginScreen
+namespace SimpleCommunicator.Views.SingInScreen
 {
     /// <summary>
-    /// Interaction logic for LoginScreen.xaml
+    /// Interaction logic for SignInScreen.xaml
     /// </summary>
-    public partial class LoginScreen : UserControl
+    public partial class SignInScreen : UserControl
     {
-        public LoginScreen()
+        public SignInScreen()
         {
             InitializeComponent();
         }
 
-        
+       
     }
 }

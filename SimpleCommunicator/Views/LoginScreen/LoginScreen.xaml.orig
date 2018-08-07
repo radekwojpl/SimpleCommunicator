@@ -4,14 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SimpleCommunicator.Views.LoginScreen"
-             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
              d:DesignHeight="410" d:DesignWidth="540" Background="White">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100*" />
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="180"/>
+            <RowDefinition Height="210"/>
             <RowDefinition Height="100*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -19,7 +17,7 @@
             <ColumnDefinition Width="340"/>
             <ColumnDefinition Width="100*"/>
         </Grid.ColumnDefinitions>
-        <GroupBox Grid.Column="1" Grid.Row="1" Header="Login" Margin="5" Grid.RowSpan="2">
+        <GroupBox Grid.Column="1" Grid.Row="1" Header="Login" Margin="5">
             <DockPanel Margin="5" >
                 <Grid>
                     <Grid.RowDefinitions>
@@ -37,18 +35,12 @@
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="1" Grid.Row="1" Content="Login" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="4"/>
                     <Label Grid.Column="1" Grid.Row="2" Content="Password" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="4"/>
-                    <TextBox Grid.Column="2" Grid.Row="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="3" Text="{Binding Login }"/>
-                    <TextBox   Grid.Column="2" Grid.Row="2"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="3" Text="{Binding Password}"  />
-                    <TextBlock Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <TextBox Grid.Column="2" Grid.Row="1"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="3"/>
+                    <PasswordBox Grid.Column="2" Grid.Row="2"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center" VerticalAlignment="Stretch" Margin="3"/>
+                    <TextBlock Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Right" VerticalAlignment="Center">
                         <StackPanel Orientation="Horizontal" Margin="3">
                             <TextBlock Margin="5">
-                                <Hyperlink>Sign In
-                                    <i:Interaction.Triggers>
-                                        <i:EventTrigger EventName="Click">
-                                            <i:InvokeCommandAction Command="{Binding Path=SignIn}" />
-                                        </i:EventTrigger>
-                                    </i:Interaction.Triggers>
-                                </Hyperlink>
+                                <Hyperlink>Sing In</Hyperlink>
                             </TextBlock>
                            <Label Content="/"/>
                              <TextBlock Margin="5">
@@ -57,13 +49,10 @@
                         </StackPanel>
                        
                     </TextBlock>
-                    <Button  Content="LogIn" Grid.Column="2" HorizontalAlignment="Left" Margin="3,5,0,0" Grid.Row="3" VerticalAlignment="Top" Width="157" Height="24">
-                        <i:Interaction.Triggers>
-                            <i:EventTrigger EventName="Click">
-                                <i:InvokeCommandAction Command="{Binding Path=Submit}" CommandParameter="{Binding ElementName=passwordBox, Path=Password}"></i:InvokeCommandAction>
-                            </i:EventTrigger>
-                        </i:Interaction.Triggers>
-                    </Button>
+<<<<<<< HEAD
+                    <Button Content="Button"  Grid.Column="2" Click="Button_Click" HorizontalAlignment="Left" Margin="41,3,0,0" Grid.Row="4" VerticalAlignment="Top" Width="75"/>
+=======
+>>>>>>> UI_Development
                 </Grid>
             </DockPanel>
         </GroupBox>
