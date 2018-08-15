@@ -25,7 +25,7 @@
                     <MenuItem Header="toPDF"></MenuItem>
                 </MenuItem>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center"  >
-                    <Label Content="UserName"></Label>
+                    <Label Content="UserName" IsEnabled="False"></Label>
                     <Label >
                         <Label.Resources>
                             <Style TargetType="{x:Type Label}">

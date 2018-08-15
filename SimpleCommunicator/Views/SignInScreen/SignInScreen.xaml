@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:SimpleCommunicator.Views.SingInScreen"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
              d:DesignHeight="410" d:DesignWidth="540" Background="White">
     <Grid>
@@ -34,10 +35,11 @@
                 <Label Content="Login"    HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
                 <Label Content="Password" HorizontalAlignment="Center" Grid.Row="2" VerticalAlignment="Center"/>
                 <Label Content="Password" HorizontalAlignment="Center" Grid.Row="3" VerticalAlignment="Center"/>
-                <TextBox Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="1"  VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5" />
-                <TextBox Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="2"  VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5" />
-                <TextBox Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="3"  VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5" />
-                <Button Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="5,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="159" Height="31"/>
+                <TextBox Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="1"  VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5" Text="{Binding SignInLogin, Mode=TwoWay}"  />
+                <TextBox Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="2"  VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5" Text="{Binding SignInPassword, Mode=TwoWay}" />
+                <TextBox Grid.Column="1" HorizontalAlignment="Stretch" Grid.Row="3"  VerticalAlignment="Stretch" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="5" Text="{Binding SignInPasswordToConfim, Mode=TwoWay}" />
+                <Button Content="Create Account" Grid.Column="1" HorizontalAlignment="Left" Margin="5,10,0,0" Grid.Row="4" VerticalAlignment="Top" Width="159" Height="31" Command="{Binding CreateAccount}">
+                </Button>
             </Grid>
         </GroupBox>
     </Grid>

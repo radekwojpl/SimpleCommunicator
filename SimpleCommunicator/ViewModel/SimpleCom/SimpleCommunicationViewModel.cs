@@ -46,7 +46,7 @@ namespace SimpleCommunicator
             set { isUserLogIn = value; RaisePropertyChanged("IsUserLogIn"); }
         }
 
-  
+
         private string login;
 
         public string Login
@@ -64,7 +64,7 @@ namespace SimpleCommunicator
         }
 
 
-        public ICommand  Submit
+        public ICommand Submit
         {
             get
             {
@@ -74,7 +74,7 @@ namespace SimpleCommunicator
 
         private bool CanExecuteSubmit()
         {
-            return (Password != null && Login != null) ? true : false;
+            return (Password != null || Login != null) ? true : false;
 
         }
 
@@ -118,6 +118,32 @@ namespace SimpleCommunicator
         #endregion
 
         #region SignInScreen
+
+        private string signInLogin;
+            
+        public string SignInLogin
+        {
+            get { return signInLogin; }
+            set { signInLogin = value; RaisePropertyChanged("SignInLogin"); }
+        }
+
+        private string signInPassword;
+
+        public string SignInPassword
+        {
+            get { return signInPassword; }
+            set { signInPassword = value; RaisePropertyChanged("SignInPassword"); }
+        }
+
+        private string signInPasswordToConfim;
+
+        public string SignInPasswordToConfim
+        {
+            get { return signInPasswordToConfim; }
+            set { signInPasswordToConfim = value; RaisePropertyChanged("SignInPasswordToConfim"); }
+        }
+
+
         public ICommand SignIn
         {
             get { return new RelayCommand(ExecuteSignIn, CanExecuteSignIn); }
@@ -134,6 +160,20 @@ namespace SimpleCommunicator
             return true;
         }
 
+        public ICommand CreateAccount
+        {
+            get { return new RelayCommand(ExecuteCreateAccount, CanExecuteCreateAccount); }
+        }
+
+        private void ExecuteCreateAccount()
+        {
+           
+        }
+
+        private bool CanExecuteCreateAccount()
+        {
+            return true;
+        }
         #endregion
 
     }
